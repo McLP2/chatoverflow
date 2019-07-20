@@ -1,8 +1,11 @@
 import java.io.{BufferedWriter, File, FileWriter, IOException}
 
 /**
-  * Represents a simple sbt files content and methods to create a new sbt file. Not intended to open/read sbt files.
+  * Represents a simple sbt file's content and methods to create a new sbt file. This is used
+  * to create the scala build information necessary to start a new project. 
+  * Not intended to (it can't) open/read sbt files.
   *
+  * @constructor          Creates a new sbt file.
   * @param name           the name of a sbt project
   * @param version        the version of a sbt project
   * @param plugins        list of paths of sub projects
@@ -11,7 +14,7 @@ import java.io.{BufferedWriter, File, FileWriter, IOException}
   */
 class SbtFile(var name: String, var version: String, var plugins: List[Plugin], var apiProjectPath: String, var defineRoot: Boolean) {
   /**
-    * Represents a simple sbt files content and methods to create a new sbt file. Not intended to open/read sbt files.
+    * Creates a new sbt file. This file will be created without sub projects, an empty api path and no root project.
     *
     * @param name    the name of a sbt project
     * @param version the version of a sbt project
@@ -19,12 +22,12 @@ class SbtFile(var name: String, var version: String, var plugins: List[Plugin], 
   def this(name: String, version: String) = this(name, version, List(), "", false)
 
   /**
-    * Represents a simple sbt files content and methods to create a new sbt file. Not intended to open/read sbt files.
+    * Creates a new sbt file. This file will contain empty name and version strings, no sub projects, an empty api path and no root project.
     */
   def this() = this("", "")
 
   /**
-    * Tries to save the sbt files content into a defined directory.
+    * Tries to save the sbt file's content into a defined directory.
     *
     * @param pathAndFileName the path of the sbt file (incl. file name)
     * @return true, if the save process was successful
@@ -33,7 +36,7 @@ class SbtFile(var name: String, var version: String, var plugins: List[Plugin], 
 
     val buildFile = new File(pathAndFileName)
 
-    // Write the build file using the SbtFiles string representation
+    // Write the build file using the SbtFile's toString method.
     val writer = new BufferedWriter(new FileWriter(buildFile))
     try {
       writer.write(this.toString)
@@ -46,9 +49,9 @@ class SbtFile(var name: String, var version: String, var plugins: List[Plugin], 
   }
 
   /**
-    * Returns the string representation of the sbt files content in valid sbt/scala syntax
+    * Returns a string representation of the sbt file's content in valid sbt/scala syntax
     *
-    * @return a multiline string with all defined attributes
+    * @return a multiline string containing all defined attributes
     */
   override def toString: String = {
 
