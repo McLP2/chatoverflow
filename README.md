@@ -22,7 +22,7 @@ The alternative: Develop everything by yourself and waste hundreds of hours with
 
 **Chat Overflow** is a plugin framework, which offers ready-to-use platform integrations for all* major streaming- and social-media-sites.
 
-**Chat Overflow** enables you to to level up your stream by writing simple, platform-independent plugins in java or scala**.
+**Chat Overflow** enables you to level up your stream by writing simple, platform-independent plugins in java or scala**.
 
 It's getting even better: The **Chat Overflow** license allows you to sell your custom plugins, creating new services for other streamers. 
 
@@ -33,20 +33,20 @@ And it's so easy. Here is all the code to get started with a simple twitch chat 
  twitchChat.get.registerMessageHandler(msg => ...)
 ```
 
-**Chat Overflow** fills the gap between simple but limited services like IFTTT and own from-scratch developed applications.
+**Chat Overflow** fills the gap between simple but limited services like IFTTT and from-scratch developed applications.
 
 *Current development state: **Pre-Alpha***
 
-\* There are still missing platforms. This is a open-source project. You can [help](https://github.com/codeoverflow-org/chatoverflow/issues), too!
+\* There are still missing platforms. This is an open-source project. You can [help](https://github.com/codeoverflow-org/chatoverflow/issues), too!
 
-\** The API is written in java. So, every JVM-compatible language is possible. Java, Scala, Kotlin, etc.
+\** The API is written in java. Therefore, every JVM-compatible language is possible. Java, Scala, Kotlin, etc.
 
 ### Installation / Releases
 Head over to [releases](https://github.com/codeoverflow-org/chatoverflow/releases). 
 
-Just download the newest zip file, make sure that java is installed and launch the framework.
+Just download the latest zip file, make sure java is installed and launch the framework.
 
-Note that you'll have to develop your own plugins or search for plugins online (e.g. on our [Discord Server](https://discord.gg/p2HDsme)). **Chat Overflow** is only the framework.
+Note that you'll have to develop plugins yourself or search for already made ones online (e.g. on our [Discord Server](https://discord.gg/p2HDsme)). **Chat Overflow** just provides the base.
 
 ### Development
 
@@ -54,16 +54,16 @@ Start with the [Installation](https://github.com/codeoverflow-org/chatoverflow/w
 
 Please consult the wiki to learn how to code new [platform sources](https://github.com/codeoverflow-org/chatoverflow/wiki/Adding-a-new-platform-source) and new [plugins](https://github.com/codeoverflow-org/chatoverflow/wiki/Writing-a-plugin).
 
-***Pre-Alpha note***: Please note that the development workflow and the documentation will be updated soon.
+***Pre-Alpha note***: Please note that development workflow and documentation will be updated soon.
 
 ### Discord
 
-The perfect place if you need help with the framework, found a bug or want to share your own plugin:
+The perfect place if you need help using or developing the framework, found a bug or want to share your own plugin:
 
 [![discord](https://discordapp.com/api/guilds/577412066994946060/widget.png?style=banner2)](https://discord.gg/p2HDsme)
 
 ### About Code Overflow
 
-Code Overflow started as a coding-livestream project from 3 computer science students @ [KIT, Karlsruhe](http://www.kit.edu/).
-Now, it is a team of free open-source developers, sitting all over the world (really, lol). 
+Code Overflow started as a coding-livestream project of 3 computer science students @ [KIT, Karlsruhe](http://www.kit.edu/).
+Now, it is a team of free open-source developers, located all around the world (really, lol). 
 The project is headed by [skate702](http://skate702.de).
