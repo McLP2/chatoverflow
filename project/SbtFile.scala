@@ -2,10 +2,10 @@ import java.io.{BufferedWriter, File, FileWriter, IOException}
 
 /**
   * Represents a simple sbt file's content and methods to create a new sbt file. This is used
-  * to create the scala build information necessary to start a new project. 
+  * to create the scala build information necessary to start a new project.
   * Not intended to (it can't) open/read sbt files.
   *
-  * @constructor          Creates a new sbt file.
+  * @constructor          Creates a new sbt file. It won't be saved until save is called though.
   * @param name           the name of a sbt project
   * @param version        the version of a sbt project
   * @param plugins        list of paths of sub projects
@@ -15,6 +15,7 @@ import java.io.{BufferedWriter, File, FileWriter, IOException}
 class SbtFile(var name: String, var version: String, var plugins: List[Plugin], var apiProjectPath: String, var defineRoot: Boolean) {
   /**
     * Creates a new sbt file. This file will be created without sub projects, an empty api path and no root project.
+    * It won't be saved until save is called though.
     *
     * @param name    the name of a sbt project
     * @param version the version of a sbt project
@@ -23,6 +24,7 @@ class SbtFile(var name: String, var version: String, var plugins: List[Plugin], 
 
   /**
     * Creates a new sbt file. This file will contain empty name and version strings, no sub projects, an empty api path and no root project.
+    * It won't be saved until save is called though.
     */
   def this() = this("", "")
 
